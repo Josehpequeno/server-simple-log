@@ -1,0 +1,12 @@
+[Unit]
+Description=Simple Log Viewer (Flask)
+After=network.target
+
+[Service]
+User=user
+WorkingDirectory=/opt/log-viewer
+ExecStart=/usr/bin/python3 /opt/log-viewer/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
